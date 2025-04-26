@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .box {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            height: 45px;
+            width: 150px;
+            position: relative;
+            top: 10rem;
+            border: 1px solid rgb(2, 16, 41);
+            border-radius: 0.7rem;
+            background-color: rgb(102, 149, 230);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <button>Random Quote Generator</button>
+    </div>
+    <h1></h1>
+
+
+    <script>
+        let btn = document.querySelector('button')
+        btn.addEventListener('click', function () {
+
+            setInterval(randomquote, 2000)
+        })
+
+        function randomquote() {
+            const quotes = [
+
+                "The best way to predict the future is to create it.",
+                "Success usually comes to those who are too busy to be looking for it.",
+                "Don't be afraid to give up the good to go for the great.",
+                "I find that the harder I work, the more luck I seem to have.",
+                "Success is not in what you have, but who you are.",
+                "Opportunities don't happen. You create them.",
+                "Don't watch the clock; do what it does. Keep going.",
+                "The future depends on what you do today.",
+                "Believe you can and you're halfway there.",
+                "The only place where success comes before work is in the dictionary.",
+                "Dream big and dare to fail.",
+                "It always seems impossible until it's done.",
+                "Hardships often prepare ordinary people for an extraordinary destiny.",
+                "Success is walking from failure to failure with no loss of enthusiasm.",
+                "The harder you work for something, the greater you’ll feel when you achieve it.",
+                "Push yourself, because no one else is going to do it for you.",
+                "Great things never come from comfort zones.",
+                "Dream it. Wish it. Do it.",
+                "Don't stop when you're tired. Stop when you're done.",
+                "Little things make big days."
+            ];
+            randindex = Math.floor(Math.random() * quotes.length);
+            document.querySelector('h1').innerHTML = quotes[randindex]
+            console.log(quotes[randindex])
+        }
+
+    </script>
+</body>
+
+</html>
